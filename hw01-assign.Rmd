@@ -1,0 +1,228 @@
+---
+title: 'hw01: Struck from a Great Height'
+subtitle: 'STAT 385, Fall 2018'
+author: "FirstName LastName (NetID)"
+date: 'Due: Friday, September 7th, 2018 at 6:00 PM'
+output:
+  html_document:
+    theme: readable
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview 
+
+Please see the [homework policy](http://stat385.stat.illinois.edu/syllabus/#homework/)
+for detailed instructions and some grading notes. Failure to follow instructions
+will result in point reductions. In particular, make sure to commit each 
+exercise as you complete them. 
+
+> Hofstadter's Law: "It always takes longer than you expect, even when you take into account Hofstadter's Law."
+>
+> --- **Douglas Hofstadter**, Gödel, Escher, Bach: An Eternal Golden Braid
+
+## Objectives 
+
+The objectives behind this homework assignment are as follows:
+
+- Create an _RMarkdown_ document and write using _Markdown_ syntax;
+- Apply the principles of literate programming;
+- Clone a `git` Repository;
+- Commit and Push changes to a `git` repository;
+- Become familiar with the homework procedures of the course.
+
+## Grading
+
+The rubric CAs will use to grade this assignment is:
+
+| Task                                                   | pts |
+|:-------------------------------------------------------|----:|
+| Assignment Formatting and GitHub   	                   | 2   |
+| At least one commit per exercise (more is better!)     | 5   |
+| Commit messages that describe what changed	           | 5   |
+| Agree to the homework policy	                         | 2   |
+| Verifying computing environment is setup               | 2   |
+| Listing where to get help in person                    | 2   |    
+| Writing in _RMarkdown_                                 | 13  | 
+| Total                                                  | 31  |
+
+## Note on Markdown
+
+If you need help with markdown syntax, please go to the "Help" menu and select the 
+_Markdown Quick Reference_ guide. This will open in the **Help** tab on
+the _lower-right_ corner of _RStudio_. For more examples, please see 
+[the literate programming slides](http://stat385.stat.illinois.edu/lectures/02-literate-programming/02-literate-programming.pdf#page=26) and the  [in class examples of writing in _RMarkdown_](https://dl.dropbox.com/s/fb36l0isvhoko8e/08-31-2018-rmarkdown-sample.Rmd?dl=0).
+
+In addition, the following _three_ [RStudio Cheatsheets](http://rstudio.com/cheatsheets) 
+will be helpful:
+
+- [RStudio IDE Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+- [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+- [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+All of these cheatsheets will be given to you during your time in the CBTF.
+
+## Note on Tutorial Videos
+
+You may find it helpful to reference the tutorial videos related to working
+with GitHub and RStudio Cloud. 
+
+See the playlist at: <https://www.youtube.com/playlist?list=PL1X-5VqzqHDjy_UfnL7WJqfU2-Fkcy_oY>
+
+You may wish to pay attention to the class forums to see when new videos are added.
+
+## Package usage
+
+For this homework assignment, you may only use the following _R_ packages:
+
+```{r}
+pkg_list = c("rmarkdown")
+```
+
+# Assignment
+
+### Collaborators
+
+If you worked with any other student in preparing these answers, please
+make sure to list their full names and NetIDs (e.g. `FirstName LastName (NetID)` ).
+
+## (12 points) Exercise 0: Get aboard the GitHub Bus!
+
+- **[2 Points] (a)** Place a link to your `hw01` GitHub repository here.
+
+
+- **[5 Points] (b)** Commit every exercise as you finish them. There are
+    _five_ exercises (including this one).
+
+- **[5 Points] (c)** Make each commit message _meaningful_. 
+    - The bare minimum for a "meaningful" commit is a length of 15 characters.
+    - Inside the commit message, please make sure to appropriately describe 
+      what is happening.
+          - Simply stating, "Exercise 3" or "Ex3" is not sufficient.
+    - Provide detail on what _changed_. 
+    
+## (2 points) Exercise 1: Homework Policy
+
+Please uncomment the following statement when you have read and agreed
+to the [homework policy](http://stat385.stat.illinois.edu/syllabus/#homework/).
+To _uncomment_ a statement in _RMarkdown_ delete the `<!-- -->` surrounding
+the content.
+
+<!-- 
+
+I have read and agree to abide by the policies and procedures laid 
+out by the [homework policy](http://stat385.stat.illinois.edu/syllabus/#homework/).
+                               
+I understand that:
+
+- I must independently write up solutions to homework problems.
+    - Failure to do so will result in an academic integrity violation due to 
+      plagarism and more severe penalties.
+- I must list the names of all collaborators that I work with at the top of
+  my homework assignment.
+- I understand that I can work with **at most** three other students in class. 
+- I must update the "author" field at the top of the homework assignments to
+  include my full name and netid.
+- I will change the name of the Rmd file from `hwXX-assign.Rmd` to 
+  `hwXX-NetId.Rmd` and ensure the output file is appropriately named in a similar
+  fashion.
+- I will turn in my homework by committing to the GitHub repository that was
+  setup for me.
+    - There is no paper or e-mail turn-in available. 
+- I must make all commits using `git` and _not_ the GitHub web interface.
+    - If I do, I will lose all the points associated with the `git` commits.
+- I must have relevant commit messages that **are longer than 15 characters**
+  to receive git commit description points.
+- I will be able to drop **one** homework assignment over the course of the 
+  semester. 
+- I understand that any academic integrity violations (cheating or assisting others)
+  will be punished to ensure a fair academic environment for all.
+-->
+
+
+## (2 points) Exercise 2: [Help! I need somebody](https://www.youtube.com/watch?v=CTsB-llTzyc) 
+
+Please answer:
+
+1. _Who_ is part of the STAT 385 instructional staff?
+1. _Where_ are **all** STAT 385's Office Hours?
+1. _When_ do the office hours take place during the week?
+
+Answers to these questions can be found on the syllabus page of the course website:
+
+<http://stat385.stat.illinois.edu/syllabus>
+
+
+## (2 Points) Exercise 3: Know Thine Environment
+
+Please take screenshots of the following and include them in your _RMarkdown_ document:
+
+1. the [RStudio Cloud STAT 385 Workspace](https://rstudio.cloud/spaces/3161). 
+2. the [STAT 385 Discussion Forum](https://github.com/stat385-fa2018/disc/issues)
+
+To take a screenshot press:
+
+- Windows: [`Windows Key` + `PrtScn`](http://windows.microsoft.com/en-us/windows/take-screen-capture-print-screen#take-screen-capture-print-screen=windows-8) or use the [Snipping tool](http://windows.microsoft.com/en-us/windows/use-snipping-tool-capture-screen-shots#1TC=windows-8)
+- macOS: [`Command` + `Shift` + `3`](https://support.apple.com/en-us/HT201361) or use [`Command` + `Shift` + `4`](https://support.apple.com/en-us/HT201361) for part of your screen.
+
+To include the screenshot, you must first _upload it_ into RStudio Cloud 
+via the "Upload" button on the lower right hand side. For details,
+please see [**Page 20** of **Reading 0**](https://github.com/stat385uiuc/rstudio-cloud-intro/raw/master/01-rstudio-cloud-stat385.pdf).
+
+**Note:** Make sure to use _relative_ paths. For details, please see 
+[Slide 34 of the Literate Programming Lecture](http://stat385.stat.illinois.edu/lectures/02-literate-programming/02-literate-programming.pdf#page=34)
+
+
+## (13 Points) Exercise 4: Who I Am
+
+If you need help with markdown syntax, please go to the "Help" menu and select the 
+_Markdown Quick Reference_ guide. This will open in the **Help** tab on
+the _lower-right_ corner of _RStudio_. For more examples, please see 
+[the literate programming slides](http://stat385.stat.illinois.edu/lectures/02-literate-programming/02-literate-programming.pdf#page=27) and the  [in class examples of writing in _RMarkdown_](https://dl.dropboxusercontent.com/s/erk7vgfgir883e6/06-12-2018-rmarkdown-sample.Rmd?dl=0).
+
+- **[2 Points] (a)** Create a self-portrait of yourself by either taking a picture or sketching it.
+  Include this self-portrait within the _RMarkdown_ document.
+    - Make sure to _upload the picture_ into RStudio Cloud and commit your photo!
+- **[2 Points] (b)** Make a 7 by 2 table in markdown.
+    - The header row should have the labels of "Overview" and "Who I Am". 
+    - Under the "Overview" column, please write entries using bold text for:
+      Full Name, NetID, Birthday, Year in School, Major, and Expected Graduation Date
+    - Under the "Who I Am" column, please fill in your personal information.
+- **[3 Points] (c)** Compile _separate_ **ordered** lists for each of your favorite:
+    - foods; 
+    - TV shows;
+    - movies;
+    - music (add links to music videos on either YouTube or Vimeo).
+- **[2 Points] (d)** Devise _two_ **unordered** lists that contain 
+  your most recent memorable events and where you typically spend your free time.
+- **[2 Points] (e)** Write the following formula as an **inline** equation. 
+    - For help writing in LaTeX, see the following guides:
+        - Symbol Guide: <https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols>
+        - [Page 32 of the Literate Programming Slides](http://stat385.stat.illinois.edu/lectures/02-literate-programming/02-literate-programming.pdf#page=32).
+
+```{r grab-eq, echo = FALSE, cache = TRUE}
+# Obtain the correct LaTeX formula image
+download.file("http://stat385.stat.illinois.edu/hw/hw01/hw01.png", "hw01.png")
+```
+
+![LaTeX Formual](hw01.png)
+
+- **[2 Points] (f)** What is the name of your favorite mathematical formula? Include the
+  formula itself using **display mode** and a link to its wikipedia entry.
+    - For inspiration, check out [Wikipedia's Mathematical Formula list](https://en.wikipedia.org/wiki/List_of_equations)!
+    - **Note:** You _cannot_ select the pythagorean theorem, golden ratio, or
+      quadratic formula.
+    
+Commit and push your work onto GitHub.
+
+
+
+
+
+
+
+
+
